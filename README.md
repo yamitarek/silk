@@ -15,5 +15,5 @@ In this section we explain the code and algorithms of the \textit{Faust} project
 ### Features Overview
 SILK has three wave generators, four waveforms (sine, triangle, square and sawtooth), a subtractive filter, AM modulation, an ADSR envelope, reverb, and supports up to 32 simultaneous voices (see Figure \ref{fig:silk_gui_qt}).
 
-![silk-gui]()
+![silk-gui](https://github.com/yamitarek/silk/blob/main/Images/silk-gui-qt.jpg)
 
