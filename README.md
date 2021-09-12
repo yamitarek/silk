@@ -68,7 +68,7 @@ lines will be used as an input by the *effect* element (see Section
 for more about this).
 
 <figure>
-<img src="Figures/process.jpg" id="fig:process" style="width:30.0%" alt="Diagram of the process line: Sound synthesis output and envelope" /><figcaption aria-hidden="true">Diagram of the process line: Sound synthesis output and envelope</figcaption>
+<img src="Figures/process.jpg" id="fig:process" style="width:30.0%" alt="Diagram of the process line: Sound synthesis output and envelope" />
 </figure>
 
 If we take a look inside the *synthTypes* block, we will see the diagram
@@ -79,7 +79,7 @@ AM (*amMod*) and the subtractive filter (*vcf*), with the particularity
 that the latter can be bypassed.
 
 <figure>
-<img src="Figures/process1.jpg" id="fig:process1" style="width:45.0%" alt="Diagram of the process line: Oscillator Synthesis, AM and subtractive filter" /><figcaption aria-hidden="true">Diagram of the process line: Oscillator Synthesis, AM and subtractive filter</figcaption>
+<img src="Figures/process1.jpg" id="fig:process1" style="width:45.0%" alt="Diagram of the process line: Oscillator Synthesis, AM and subtractive filter" />
 </figure>
 
 ### Oscillator Synthesis
@@ -93,7 +93,7 @@ For the sine and triangle waves we added overtones in order to obtain a
 richer tone.
 
 <figure>
-<img src="Figures/osc_synth_1.jpg" id="fig:osc_synth_1" style="width:50.0%" alt="Defining the waveforms: Generic Faust function waveGenerator" /><figcaption aria-hidden="true">Defining the waveforms: Generic <em>Faust</em> function <em>waveGenerator</em></figcaption>
+<img src="Figures/osc_synth_1.jpg" id="fig:osc_synth_1" style="width:50.0%" alt="Defining the waveforms: Generic Faust function waveGenerator" />
 </figure>
 
 Subsequently, three wave generators are created using this generic
@@ -103,7 +103,7 @@ Having multiple wave generators to use simultaneously allows users of
 SILK to further shape their own tone.
 
 <figure>
-<img src="Figures/wavegens.jpg" id="fig:wavegens" style="width:50.0%" alt="Creating three wave generators using the generic waveGenerator function" /><figcaption aria-hidden="true">Creating three wave generators using the generic <em>waveGenerator</em> function</figcaption>
+<img src="Figures/wavegens.jpg" id="fig:wavegens" style="width:50.0%" alt="Creating three wave generators using the generic waveGenerator function" />
 </figure>
 
 ### AM Modulation
@@ -114,7 +114,7 @@ code for the implementation of the AM in SILK is presented in Figure
 <a href="#fig:am_mod" data-reference-type="ref" data-reference="fig:am_mod">6</a>.
 
 <figure>
-<img src="Figures/am_mod.jpg" id="fig:am_mod" style="width:50.0%" alt="AM Modulation" /><figcaption aria-hidden="true">AM Modulation</figcaption>
+<img src="Figures/am_mod.jpg" id="fig:am_mod" style="width:50.0%" alt="AM Modulation" />
 </figure>
 
 To which extent the modulation is done, is specified by the *modulation
@@ -133,7 +133,7 @@ We take advantage here of *fi.reson.lp*, a simple resonant lowpass
 filter based on tf2s (virtual analog) of the *Faust* libraries.
 
 <figure>
-<img src="Figures/sub_fil.jpg" id="fig:sub_fil" style="width:50.0%" alt="Subtractive Filter" /><figcaption aria-hidden="true">Subtractive Filter</figcaption>
+<img src="Figures/sub_fil.jpg" id="fig:sub_fil" style="width:50.0%" alt="Subtractive Filter" />
 </figure>
 
 ### Envelope
@@ -151,7 +151,7 @@ use the *adsr* object of the envelope library in *Faust* (see Figure
 <a href="#fig:envelope" data-reference-type="ref" data-reference="fig:envelope">8</a>).
 
 <figure>
-<img src="Figures/envelope.jpg" id="fig:envelope" style="width:50.0%" alt="ADSR envelope in Faust" /><figcaption aria-hidden="true">ADSR envelope in <em>Faust</em></figcaption>
+<img src="Figures/envelope.jpg" id="fig:envelope" style="width:50.0%" alt="ADSR envelope in Faust" />
 </figure>
 
 ### Polyphony
@@ -186,7 +186,7 @@ end of our process line (See figure
 <a href="#fig:process" data-reference-type="ref" data-reference="fig:process">2</a>).
 
 <figure>
-<img src="Figures/audio_effect.jpg" id="fig:audio_effect" style="width:50.0%" alt="Audio effect in Faust" /><figcaption aria-hidden="true">Audio effect in <em>Faust</em></figcaption>
+<img src="Figures/audio_effect.jpg" id="fig:audio_effect" style="width:50.0%" alt="Audio effect in Faust" />
 </figure>
 
 ## Implementation
