@@ -26,7 +26,7 @@ effects, filters, and more ready to use. Finally, code generated in
 *Faust* can be compiled in a wide variety of objects, such as plugins,
 standalone apps, or smartphone apps.
 
-The first part of this paper talks about the *Faust* code of our
+The first part of this readme talks about the *Faust* code of our
 synthesizer. Afterward, the workflow for obtaining a plugin from there
 is presented.
 
