@@ -191,7 +191,7 @@ end of our process line (See figure
 
 ## Implementation
 
-There are several approaches to generating a plug-in instrume#nt using
+There are several approaches to generating a plug-in instrument using
 FAUST. Since our goal was to have the synth usable for audio production
 inside a Digital Audio Workstation (DAW) and we had access to Logic Pro
 X, which only supports the Audio Unit format (AU) natively, we decided
@@ -214,7 +214,7 @@ Steinberg’s vst development kit. Using the *Faust IDE’s* option to
 export and compile to a specific platform binary code, we chose *osx* as
 the platform and *vst* or *vsti* as the architecture. Unlike the
 aformentioned faust2au script, the vst option built without any
-problems. After exporting using the **Faust* IDE*, we can now download
+problems. After exporting using the *Faust IDE*, we can now download
 the export. The download contains the vst(i) file as well as a makefile
 and the FAUST code. We now place the vst file in the folder, that is at
 the end of the path, where our DAW scans for vst plug-ins. For Mac users
