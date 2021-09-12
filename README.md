@@ -1,7 +1,9 @@
-# silk
-silk is a plug-in instrument built with faust.
+# SILK. Building a synth plugin in Faust
 
-It was built as part of the TU Berlin course Sound Synthesis: Building Instruments with Faust
+SILK is a synthesizer AU/VST plugin written in Faust. This readme covers the Faust code and fundamentals of the algorithms, as well as workflow routines to transfer the Faust code into a playable AU/VST Plugin.
 
-If you are interested in how to build a plug-in by yourself fast, check out the presentation slides.
+## Introduction
+
+## Faust Project
+### Features Overview
 
