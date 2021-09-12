@@ -1,10 +1,7 @@
----
-bibliography:
-- aes2e.bib
-title: SILK. Building a synth plugin in Faust
----
+# SILK. Building a synth plugin in Faust
 
-# INTRODUCTION
+
+## Introduction
 
 Synth plugins are used for synthesizing sounds with the help of
 oscillators, different waveforms, filters, modulation and other tools.
@@ -33,12 +30,12 @@ The first part of this paper talks about the *Faust* code of our
 synthesizer. Afterward, the workflow for obtaining a plugin from there
 is presented.
 
-# Faust Project
+## Faust Project
 
 In this section we explain the code and algorithms of the *Faust*
 project for SILK.
 
-## Features Overview
+### Features Overview
 
 SILK has three wave generators, four waveforms (sine, triangle, square
 and sawtooth), a subtractive filter, AM modulation, an ADSR envelope,
@@ -49,7 +46,7 @@ reverb, and supports up to 32 simultaneous voices (see Figure
 <img src="Figures/silk-gui-qt.jpg" id="fig:silk_gui_qt" style="width:35.0%" alt="Qt interface of the SILK synthesizer in the Faust IDE" /><figcaption aria-hidden="true">Qt interface of the SILK synthesizer in the <em>Faust IDE</em></figcaption>
 </figure>
 
-## Process Line
+### Process Line
 
 Before we dive into the individual parts that are involved in the signal
 processing of our synthesizer, let’s take a look at the bigger picture.
@@ -85,7 +82,7 @@ that the latter can be bypassed.
 <img src="Figures/process1.jpg" id="fig:process1" style="width:45.0%" alt="Diagram of the process line: Oscillator Synthesis, AM and subtractive filter" /><figcaption aria-hidden="true">Diagram of the process line: Oscillator Synthesis, AM and subtractive filter</figcaption>
 </figure>
 
-## Oscillator Synthesis
+### Oscillator Synthesis
 
 The basic *Faust* code that is used for generating waves in SILK is
 presented in Figure
@@ -109,7 +106,7 @@ SILK to further shape their own tone.
 <img src="Figures/wavegens.jpg" id="fig:wavegens" style="width:50.0%" alt="Creating three wave generators using the generic waveGenerator function" /><figcaption aria-hidden="true">Creating three wave generators using the generic <em>waveGenerator</em> function</figcaption>
 </figure>
 
-## AM Modulation
+### AM Modulation
 
 AM (Amplitude Modulation) consists in modulating the amplitude of a
 given wave with another wave that is called *modulator*. The *Faust*
@@ -124,7 +121,7 @@ To which extent the modulation is done, is specified by the *modulation
 depth* parameter. We are also able to choose which waveform we want to
 use for modulating, and at which frequency.
 
-## Subtractive Filter
+### Subtractive Filter
 
 Subtractive synthesis is the process of taking an initial, harmonic-rich
 tone, and subtracting parts of it using filters and other tools in order
@@ -139,7 +136,7 @@ filter based on tf2s (virtual analog) of the *Faust* libraries.
 <img src="Figures/sub_fil.jpg" id="fig:sub_fil" style="width:50.0%" alt="Subtractive Filter" /><figcaption aria-hidden="true">Subtractive Filter</figcaption>
 </figure>
 
-## Envelope
+### Envelope
 
 The SILK integrates an ADSR envelope at the final stage of the process
 line (see Figure
@@ -157,7 +154,7 @@ use the *adsr* object of the envelope library in *Faust* (see Figure
 <img src="Figures/envelope.jpg" id="fig:envelope" style="width:50.0%" alt="ADSR envelope in Faust" /><figcaption aria-hidden="true">ADSR envelope in <em>Faust</em></figcaption>
 </figure>
 
-## Polyphony
+### Polyphony
 
 If we take a closer look at the code of the envelope, we see that we
 have multiplied the gain of our envelope by 0.5 (see figure
@@ -173,7 +170,7 @@ the desired number of simultaneous voices. By default this is set to
 *Mono*, which doesn’t take any MIDI input. For our synthesizer, we set
 it to 32 voices.
 
-## Reverb
+### Reverb
 
 So we already have a polyphonic synth and we want to add a reverb. We
 might be tempted to put a reverb element at the end of our process line,
@@ -192,9 +189,9 @@ end of our process line (See figure
 <img src="Figures/audio_effect.jpg" id="fig:audio_effect" style="width:50.0%" alt="Audio effect in Faust" /><figcaption aria-hidden="true">Audio effect in <em>Faust</em></figcaption>
 </figure>
 
-# IMPLEMENTATION
+## Implementation
 
-There are several approaches to generating a plug-in instrument using
+There are several approaches to generating a plug-in instrume#nt using
 FAUST. Since our goal was to have the synth usable for audio production
 inside a Digital Audio Workstation (DAW) and we had access to Logic Pro
 X, which only supports the Audio Unit format (AU) natively, we decided
@@ -206,7 +203,7 @@ approach, which led us to trying the alternatives we will introduce in
 this paper. The different approaches yield different results and come
 with individual advantages and drawbacks which we will examine, too.
 
-## faust2vst
+### faust2vst
 
 The first workaround we employed is a fairly simple approach to the
 problem of Logic Pro X not being able to utilize other formats besides
@@ -277,7 +274,7 @@ workflow still holds value especially for audio effects development.
 However, the challenging layout and operating might prove useful or
 inspiring for the creation of drone sounds.
 
-## faust2juce
+### faust2juce
 
 This approach consists of three steps:
 
@@ -317,7 +314,7 @@ delayed. However, JUCEs varied possibilities ultimately allow for the
 user to customize their GUI with far more precision than other
 workflows.
 
-# CONCLUSION
+## Conclusion
 
 Ultimately, we have managed to achieve our goal of building a functional
 synth plugin and running it in our DAW. However, our approaches
