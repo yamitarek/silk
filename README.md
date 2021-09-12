@@ -43,7 +43,7 @@ reverb, and supports up to 32 simultaneous voices (see Figure
 <a href="#fig:silk_gui_qt" data-reference-type="ref" data-reference="fig:silk_gui_qt">1</a>).
 
 <figure>
-<img src="Figures/silk-gui-qt.jpg" id="fig:silk_gui_qt" style="width:35.0%" alt="Qt interface of the SILK synthesizer in the Faust IDE" /><figcaption aria-hidden="true">Qt interface of the SILK synthesizer in the <em>Faust IDE</em></figcaption>
+<img src="Figures/silk-gui-qt.jpg" id="fig:silk_gui_qt" style="width:35.0%" alt="Qt interface of the SILK synthesizer in the Faust IDE" />
 </figure>
 
 ### Process Line
